@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xFlashMaker;
 
 namespace xFlashMaker
 {
@@ -17,9 +18,12 @@ namespace xFlashMaker
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        List<Flashcard> flashcards = new List<Flashcard>();
 
+        private void display_flashcards()
+        {
+            Flashcards_CheckedListBox.Items.Clear();
+            Flashcards_CheckedListBox.Items.AddRange(flashcards.ToArray());
         }
 
         private void Term_TextBox_Enter(object sender, EventArgs e)

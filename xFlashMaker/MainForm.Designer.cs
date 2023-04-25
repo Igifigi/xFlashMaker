@@ -141,7 +141,6 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "xFlash Maker";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
