@@ -109,6 +109,7 @@
             this.CreateFlashcard_Button.TabIndex = 4;
             this.CreateFlashcard_Button.Text = "Create flashcard";
             this.CreateFlashcard_Button.UseVisualStyleBackColor = true;
+            this.CreateFlashcard_Button.Click += new System.EventHandler(this.CreateFlashcard_Button_Click);
             // 
             // Definition_TextBox
             // 

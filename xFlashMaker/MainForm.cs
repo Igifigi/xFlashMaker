@@ -20,38 +20,63 @@ namespace xFlashMaker
 
         List<Flashcard> flashcards = new List<Flashcard>();
 
-        private void display_flashcards()
+        private void update_flashcards()
         {
             Flashcards_CheckedListBox.Items.Clear();
             Flashcards_CheckedListBox.Items.AddRange(flashcards.ToArray());
         }
 
+        private void CreateFlashcard_Button_Click(object sender, EventArgs e)
+        {
+            flashcards.Add(new Flashcard(Term_TextBox.Text, Definition_TextBox.Text));
+            Term_TextBox.Text = string.Empty;
+            Definition_TextBox.Text = string.Empty;
+            Term_TextBox.Text = "Term";
+            Term_TextBox.ForeColor = SystemColors.GrayText;
+            Definition_TextBox.Text = "Definition";
+            Definition_TextBox.ForeColor = SystemColors.GrayText;
+            update_flashcards();
+
+        }
+
+        #region Textbox management
+
         private void Term_TextBox_Enter(object sender, EventArgs e)
         {
             if (Term_TextBox.Text == "Term")
+            {
                 Term_TextBox.Text = string.Empty;
-            Term_TextBox.ForeColor = Color.Black;
+                Term_TextBox.ForeColor = Color.Black;
+            }
         }
 
         private void Term_TextBox_Leave(object sender, EventArgs e)
         {
             if (Term_TextBox.Text == string.Empty)
+            {
                 Term_TextBox.Text = "Term";
-            Term_TextBox.ForeColor = SystemColors.GrayText;
+                Term_TextBox.ForeColor = SystemColors.GrayText;
+            }
         }
 
         private void Definition_TextBox_Enter(object sender, EventArgs e)
         {
             if (Definition_TextBox.Text == "Definition")
+            {
                 Definition_TextBox.Text = string.Empty;
-            Definition_TextBox.ForeColor = Color.Black;
+                Definition_TextBox.ForeColor = Color.Black;
+            }
         }
 
         private void Definition_TextBox_Leave(object sender, EventArgs e)
         {
             if (Definition_TextBox.Text == string.Empty)
+            {
                 Definition_TextBox.Text = "Definition";
-            Definition_TextBox.ForeColor = SystemColors.GrayText;
+                Definition_TextBox.ForeColor = SystemColors.GrayText;
+            }
         }
+
+        #endregion
     }
 }
