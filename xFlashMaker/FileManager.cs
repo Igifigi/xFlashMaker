@@ -16,6 +16,11 @@ namespace xFlashMaker
             return JsonConvert.SerializeObject(flashcards, Formatting.Indented);
         }
 
+        private static IEnumerable<Flashcard> decode_json(string json)
+        {
+            return JsonConvert.DeserializeObject<IEnumerable<Flashcard>>(json);
+        }
+
         public static void export_flashcards(IEnumerable<Flashcard> flashcards)
         {
             SaveFileDialog dialog = new SaveFileDialog();
@@ -25,6 +30,16 @@ namespace xFlashMaker
             if (dialog.ShowDialog() == DialogResult.OK)
                 File.WriteAllText(dialog.FileName, generate_json(flashcards));
         }
+
+        public static IEnumerable<Flashcard> import_flashcards()
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Flashcards file|*.fcs";
+            dialog.Title = "Import flashcards";
+            if (dialog.ShowDialog() == DialogResult.OK)
+                return decode_json(File.ReadAllText(dialog.FileName));
+            return null;
+        } 
 
     }
 }

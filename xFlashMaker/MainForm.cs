@@ -60,6 +60,12 @@ namespace xFlashMaker
             FileManager.export_flashcards(Flashcards_CheckedListBox.CheckedItems.Cast<Flashcard>().ToList());
         }
 
+        private void ImportFlashcards_Button_Click(object sender, EventArgs e)
+        {
+            flashcards.AddRange(FileManager.import_flashcards());
+            update_flashcards();
+        }
+
         private void check_all(CheckedListBox clb, bool check)
         {
             for(int i = 0; i < clb.Items.Count; i++)

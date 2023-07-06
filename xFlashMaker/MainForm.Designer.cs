@@ -78,6 +78,7 @@
             this.ImportFlashcards_Button.TabIndex = 6;
             this.ImportFlashcards_Button.Text = "Import flashcards";
             this.ImportFlashcards_Button.UseVisualStyleBackColor = true;
+            this.ImportFlashcards_Button.Click += new System.EventHandler(this.ImportFlashcards_Button_Click);
             // 
             // ExportFlashcards_Button
             // 
