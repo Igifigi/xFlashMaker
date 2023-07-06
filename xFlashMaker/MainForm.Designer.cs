@@ -56,6 +56,7 @@
             this.UnselectAll_Button.TabIndex = 4;
             this.UnselectAll_Button.Text = "Unselect all";
             this.UnselectAll_Button.UseVisualStyleBackColor = true;
+            this.UnselectAll_Button.Click += new System.EventHandler(this.UnselectAll_Button_Click);
             // 
             // SelectAll_Button
             // 
@@ -66,6 +67,7 @@
             this.SelectAll_Button.TabIndex = 3;
             this.SelectAll_Button.Text = "Select all";
             this.SelectAll_Button.UseVisualStyleBackColor = true;
+            this.SelectAll_Button.Click += new System.EventHandler(this.SelectAll_Button_Click);
             // 
             // ImportFlashcards_Button
             // 

@@ -29,7 +29,7 @@ namespace xFlashMaker
         private void create_flashcard()
         {
             if (
-                Term_TextBox.Text == "Term" || 
+                Term_TextBox.Text == "Term" ||
                 Definition_TextBox.Text == "Definition" ||
                 Term_TextBox.Text == "" ||
                 Definition_TextBox.Text == ""
@@ -52,11 +52,28 @@ namespace xFlashMaker
         {
             create_flashcard();
         }
+
         private void ExportFlashcards_Button_Click(object sender, EventArgs e)
         {
             if (Flashcards_CheckedListBox.CheckedItems.Count < 1)
                 return;
             FileManager.export_flashcards(Flashcards_CheckedListBox.CheckedItems.Cast<Flashcard>().ToList());
+        }
+
+        private void check_all(CheckedListBox clb, bool check)
+        {
+            for(int i = 0; i < clb.Items.Count; i++)
+                clb.SetItemChecked(i, check);
+        }
+
+        private void SelectAll_Button_Click(object sender, EventArgs e)
+        {
+            check_all(Flashcards_CheckedListBox, true);
+        }
+
+        private void UnselectAll_Button_Click(object sender, EventArgs e)
+        {
+            check_all(Flashcards_CheckedListBox, false);
         }
 
         #region Textbox management
