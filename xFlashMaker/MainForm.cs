@@ -81,6 +81,22 @@ namespace xFlashMaker
         {
             check_all(Flashcards_CheckedListBox, false);
         }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show(
+                "Do you really want to clone the app? Are you sure you saved flashcards?",
+                "Warning",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+                ) == DialogResult.Yes)
+            {
+                Validate();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
 
         #region Textbox management
 

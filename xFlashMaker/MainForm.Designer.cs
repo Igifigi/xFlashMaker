@@ -148,6 +148,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "xFlash Maker";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
