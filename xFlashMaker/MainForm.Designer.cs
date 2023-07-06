@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Flashcards_CheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.UnselectAll_Button = new System.Windows.Forms.Button();
             this.SelectAll_Button = new System.Windows.Forms.Button();
@@ -145,6 +146,7 @@
             this.Controls.Add(this.UnselectAll_Button);
             this.Controls.Add(this.Flashcards_CheckedListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "xFlash Maker";
