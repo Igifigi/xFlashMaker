@@ -9,8 +9,8 @@ namespace xFlashMaker
 {
     internal class Flashcard
     {
-        private string term { get; set; }
-        private string definition { get; set; }
+        public string term { get; set; }
+        public string definition { get; set; }
 
         public Flashcard(string term, string definition) {
             this.term = term;
