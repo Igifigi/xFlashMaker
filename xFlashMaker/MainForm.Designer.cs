@@ -86,6 +86,7 @@
             this.ExportFlashcards_Button.TabIndex = 7;
             this.ExportFlashcards_Button.Text = "Export flashcards";
             this.ExportFlashcards_Button.UseVisualStyleBackColor = true;
+            this.ExportFlashcards_Button.Click += new System.EventHandler(this.ExportFlashcards_Button_Click);
             // 
             // Term_TextBox
             // 

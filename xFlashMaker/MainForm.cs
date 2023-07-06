@@ -52,6 +52,12 @@ namespace xFlashMaker
         {
             create_flashcard();
         }
+        private void ExportFlashcards_Button_Click(object sender, EventArgs e)
+        {
+            if (Flashcards_CheckedListBox.CheckedItems.Count < 1)
+                return;
+            FileManager.export_flashcards(Flashcards_CheckedListBox.CheckedItems.Cast<Flashcard>().ToList());
+        }
 
         #region Textbox management
 
