@@ -45,7 +45,7 @@
             this.Flashcards_CheckedListBox.Location = new System.Drawing.Point(12, 407);
             this.Flashcards_CheckedListBox.Name = "Flashcards_CheckedListBox";
             this.Flashcards_CheckedListBox.Size = new System.Drawing.Size(806, 704);
-            this.Flashcards_CheckedListBox.TabIndex = 7;
+            this.Flashcards_CheckedListBox.TabIndex = 5;
             // 
             // UnselectAll_Button
             // 
@@ -53,7 +53,7 @@
             this.UnselectAll_Button.Location = new System.Drawing.Point(418, 326);
             this.UnselectAll_Button.Name = "UnselectAll_Button";
             this.UnselectAll_Button.Size = new System.Drawing.Size(400, 75);
-            this.UnselectAll_Button.TabIndex = 6;
+            this.UnselectAll_Button.TabIndex = 4;
             this.UnselectAll_Button.Text = "Unselect all";
             this.UnselectAll_Button.UseVisualStyleBackColor = true;
             // 
@@ -63,7 +63,7 @@
             this.SelectAll_Button.Location = new System.Drawing.Point(12, 326);
             this.SelectAll_Button.Name = "SelectAll_Button";
             this.SelectAll_Button.Size = new System.Drawing.Size(400, 75);
-            this.SelectAll_Button.TabIndex = 5;
+            this.SelectAll_Button.TabIndex = 3;
             this.SelectAll_Button.Text = "Select all";
             this.SelectAll_Button.UseVisualStyleBackColor = true;
             // 
@@ -73,7 +73,7 @@
             this.ImportFlashcards_Button.Location = new System.Drawing.Point(12, 12);
             this.ImportFlashcards_Button.Name = "ImportFlashcards_Button";
             this.ImportFlashcards_Button.Size = new System.Drawing.Size(400, 75);
-            this.ImportFlashcards_Button.TabIndex = 0;
+            this.ImportFlashcards_Button.TabIndex = 6;
             this.ImportFlashcards_Button.Text = "Import flashcards";
             this.ImportFlashcards_Button.UseVisualStyleBackColor = true;
             // 
@@ -83,7 +83,7 @@
             this.ExportFlashcards_Button.Location = new System.Drawing.Point(418, 12);
             this.ExportFlashcards_Button.Name = "ExportFlashcards_Button";
             this.ExportFlashcards_Button.Size = new System.Drawing.Size(400, 75);
-            this.ExportFlashcards_Button.TabIndex = 1;
+            this.ExportFlashcards_Button.TabIndex = 7;
             this.ExportFlashcards_Button.Text = "Export flashcards";
             this.ExportFlashcards_Button.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +95,7 @@
             this.Term_TextBox.Margin = new System.Windows.Forms.Padding(10);
             this.Term_TextBox.Name = "Term_TextBox";
             this.Term_TextBox.Size = new System.Drawing.Size(792, 56);
-            this.Term_TextBox.TabIndex = 2;
+            this.Term_TextBox.TabIndex = 0;
             this.Term_TextBox.Text = "Term";
             this.Term_TextBox.Enter += new System.EventHandler(this.Term_TextBox_Enter);
             this.Term_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Term_TextBox_KeyDown);
@@ -107,7 +107,7 @@
             this.CreateFlashcard_Button.Location = new System.Drawing.Point(12, 245);
             this.CreateFlashcard_Button.Name = "CreateFlashcard_Button";
             this.CreateFlashcard_Button.Size = new System.Drawing.Size(806, 75);
-            this.CreateFlashcard_Button.TabIndex = 4;
+            this.CreateFlashcard_Button.TabIndex = 2;
             this.CreateFlashcard_Button.Text = "Create flashcard";
             this.CreateFlashcard_Button.UseVisualStyleBackColor = true;
             this.CreateFlashcard_Button.Click += new System.EventHandler(this.CreateFlashcard_Button_Click);
@@ -120,7 +120,7 @@
             this.Definition_TextBox.Margin = new System.Windows.Forms.Padding(10);
             this.Definition_TextBox.Name = "Definition_TextBox";
             this.Definition_TextBox.Size = new System.Drawing.Size(792, 56);
-            this.Definition_TextBox.TabIndex = 3;
+            this.Definition_TextBox.TabIndex = 1;
             this.Definition_TextBox.Text = "Definition";
             this.Definition_TextBox.Enter += new System.EventHandler(this.Definition_TextBox_Enter);
             this.Definition_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Definition_TextBox_KeyDown);
