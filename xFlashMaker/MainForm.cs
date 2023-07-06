@@ -123,13 +123,19 @@ namespace xFlashMaker
         private void Term_TextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
                 Definition_TextBox.Focus();
+            }
         }
 
         private void Definition_TextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
                 create_flashcard();
+            }
         }
 
         #endregion
