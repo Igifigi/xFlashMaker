@@ -98,6 +98,7 @@
             this.Term_TextBox.TabIndex = 2;
             this.Term_TextBox.Text = "Term";
             this.Term_TextBox.Enter += new System.EventHandler(this.Term_TextBox_Enter);
+            this.Term_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Term_TextBox_KeyDown);
             this.Term_TextBox.Leave += new System.EventHandler(this.Term_TextBox_Leave);
             // 
             // CreateFlashcard_Button
@@ -122,6 +123,7 @@
             this.Definition_TextBox.TabIndex = 3;
             this.Definition_TextBox.Text = "Definition";
             this.Definition_TextBox.Enter += new System.EventHandler(this.Definition_TextBox_Enter);
+            this.Definition_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Definition_TextBox_KeyDown);
             this.Definition_TextBox.Leave += new System.EventHandler(this.Definition_TextBox_Leave);
             // 
             // MainForm

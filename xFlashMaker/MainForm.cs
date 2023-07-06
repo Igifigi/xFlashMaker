@@ -26,17 +26,31 @@ namespace xFlashMaker
             Flashcards_CheckedListBox.Items.AddRange(flashcards.ToArray());
         }
 
-        private void CreateFlashcard_Button_Click(object sender, EventArgs e)
+        private void create_flashcard()
         {
+            if (
+                Term_TextBox.Text == "Term" || 
+                Definition_TextBox.Text == "Definition" ||
+                Term_TextBox.Text == "" ||
+                Definition_TextBox.Text == ""
+                )
+                return;
             flashcards.Add(new Flashcard(Term_TextBox.Text, Definition_TextBox.Text));
+
             Term_TextBox.Text = string.Empty;
             Definition_TextBox.Text = string.Empty;
             Term_TextBox.Text = "Term";
             Term_TextBox.ForeColor = SystemColors.GrayText;
             Definition_TextBox.Text = "Definition";
             Definition_TextBox.ForeColor = SystemColors.GrayText;
-            update_flashcards();
 
+            update_flashcards();
+            Term_TextBox.Focus();
+        }
+
+        private void CreateFlashcard_Button_Click(object sender, EventArgs e)
+        {
+            create_flashcard();
         }
 
         #region Textbox management
@@ -75,6 +89,18 @@ namespace xFlashMaker
                 Definition_TextBox.Text = "Definition";
                 Definition_TextBox.ForeColor = SystemColors.GrayText;
             }
+        }
+
+        private void Term_TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                Definition_TextBox.Focus();
+        }
+
+        private void Definition_TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+                create_flashcard();
         }
 
         #endregion
