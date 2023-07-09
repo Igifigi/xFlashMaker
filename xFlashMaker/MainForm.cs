@@ -32,7 +32,9 @@ namespace xFlashMaker
                 Term_TextBox.Text == "Term" ||
                 Definition_TextBox.Text == "Definition" ||
                 Term_TextBox.Text == "" ||
-                Definition_TextBox.Text == ""
+                Definition_TextBox.Text == "" ||
+                string.IsNullOrEmpty(Term_TextBox.Text) ||
+                string.IsNullOrEmpty(Definition_TextBox.Text)
                 )
                 return;
             flashcards.Add(new Flashcard(Term_TextBox.Text, Definition_TextBox.Text));
