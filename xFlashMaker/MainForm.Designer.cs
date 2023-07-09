@@ -45,17 +45,19 @@
             // 
             this.Flashcards_CheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Flashcards_CheckedListBox.FormattingEnabled = true;
-            this.Flashcards_CheckedListBox.Location = new System.Drawing.Point(12, 407);
+            this.Flashcards_CheckedListBox.Location = new System.Drawing.Point(11, 237);
+            this.Flashcards_CheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Flashcards_CheckedListBox.Name = "Flashcards_CheckedListBox";
-            this.Flashcards_CheckedListBox.Size = new System.Drawing.Size(806, 704);
+            this.Flashcards_CheckedListBox.Size = new System.Drawing.Size(393, 400);
             this.Flashcards_CheckedListBox.TabIndex = 5;
             // 
             // UnselectAll_Button
             // 
             this.UnselectAll_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UnselectAll_Button.Location = new System.Drawing.Point(418, 326);
+            this.UnselectAll_Button.Location = new System.Drawing.Point(210, 194);
+            this.UnselectAll_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UnselectAll_Button.Name = "UnselectAll_Button";
-            this.UnselectAll_Button.Size = new System.Drawing.Size(400, 75);
+            this.UnselectAll_Button.Size = new System.Drawing.Size(194, 39);
             this.UnselectAll_Button.TabIndex = 4;
             this.UnselectAll_Button.Text = "Unselect all";
             this.UnselectAll_Button.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // SelectAll_Button
             // 
             this.SelectAll_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.SelectAll_Button.Location = new System.Drawing.Point(12, 326);
+            this.SelectAll_Button.Location = new System.Drawing.Point(11, 194);
+            this.SelectAll_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SelectAll_Button.Name = "SelectAll_Button";
-            this.SelectAll_Button.Size = new System.Drawing.Size(400, 75);
+            this.SelectAll_Button.Size = new System.Drawing.Size(195, 39);
             this.SelectAll_Button.TabIndex = 3;
             this.SelectAll_Button.Text = "Select all";
             this.SelectAll_Button.UseVisualStyleBackColor = true;
@@ -100,10 +103,10 @@
             // 
             this.Term_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Term_TextBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Term_TextBox.Location = new System.Drawing.Point(19, 100);
-            this.Term_TextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.Term_TextBox.Location = new System.Drawing.Point(11, 70);
+            this.Term_TextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Term_TextBox.Name = "Term_TextBox";
-            this.Term_TextBox.Size = new System.Drawing.Size(792, 56);
+            this.Term_TextBox.Size = new System.Drawing.Size(393, 32);
             this.Term_TextBox.TabIndex = 0;
             this.Term_TextBox.Text = "Term";
             this.Term_TextBox.Enter += new System.EventHandler(this.Term_TextBox_Enter);
@@ -113,9 +116,10 @@
             // CreateFlashcard_Button
             // 
             this.CreateFlashcard_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CreateFlashcard_Button.Location = new System.Drawing.Point(12, 245);
+            this.CreateFlashcard_Button.Location = new System.Drawing.Point(11, 151);
+            this.CreateFlashcard_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateFlashcard_Button.Name = "CreateFlashcard_Button";
-            this.CreateFlashcard_Button.Size = new System.Drawing.Size(806, 75);
+            this.CreateFlashcard_Button.Size = new System.Drawing.Size(393, 39);
             this.CreateFlashcard_Button.TabIndex = 2;
             this.CreateFlashcard_Button.Text = "Create flashcard";
             this.CreateFlashcard_Button.UseVisualStyleBackColor = true;
@@ -125,32 +129,59 @@
             // 
             this.Definition_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Definition_TextBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Definition_TextBox.Location = new System.Drawing.Point(19, 176);
-            this.Definition_TextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.Definition_TextBox.Location = new System.Drawing.Point(11, 112);
+            this.Definition_TextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Definition_TextBox.Name = "Definition_TextBox";
-            this.Definition_TextBox.Size = new System.Drawing.Size(792, 56);
+            this.Definition_TextBox.Size = new System.Drawing.Size(393, 32);
             this.Definition_TextBox.TabIndex = 1;
             this.Definition_TextBox.Text = "Definition";
             this.Definition_TextBox.Enter += new System.EventHandler(this.Definition_TextBox_Enter);
             this.Definition_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Definition_TextBox_KeyDown);
             this.Definition_TextBox.Leave += new System.EventHandler(this.Definition_TextBox_Leave);
             // 
+            // ImportFlashcards_CSV_Button
+            // 
+            this.ImportFlashcards_CSV_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ImportFlashcards_CSV_Button.Location = new System.Drawing.Point(11, 39);
+            this.ImportFlashcards_CSV_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.ImportFlashcards_CSV_Button.Name = "ImportFlashcards_CSV_Button";
+            this.ImportFlashcards_CSV_Button.Size = new System.Drawing.Size(195, 24);
+            this.ImportFlashcards_CSV_Button.TabIndex = 8;
+            this.ImportFlashcards_CSV_Button.Text = "Import flashcards from .csv";
+            this.ImportFlashcards_CSV_Button.UseVisualStyleBackColor = true;
+            this.ImportFlashcards_CSV_Button.Click += new System.EventHandler(this.ImportFlashcards_CSV_Button_Click);
+            // 
+            // ExportFlashcards_CSV_Button
+            // 
+            this.ExportFlashcards_CSV_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ExportFlashcards_CSV_Button.Location = new System.Drawing.Point(210, 39);
+            this.ExportFlashcards_CSV_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.ExportFlashcards_CSV_Button.Name = "ExportFlashcards_CSV_Button";
+            this.ExportFlashcards_CSV_Button.Size = new System.Drawing.Size(194, 24);
+            this.ExportFlashcards_CSV_Button.TabIndex = 9;
+            this.ExportFlashcards_CSV_Button.Text = "Export flashcards as .csv";
+            this.ExportFlashcards_CSV_Button.UseVisualStyleBackColor = true;
+            this.ExportFlashcards_CSV_Button.Click += new System.EventHandler(this.ExportFlashcards_CSV_Button_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(830, 1136);
+            this.ClientSize = new System.Drawing.Size(415, 648);
+            this.Controls.Add(this.ExportFlashcards_CSV_Button);
+            this.Controls.Add(this.ImportFlashcards_CSV_Button);
             this.Controls.Add(this.Definition_TextBox);
             this.Controls.Add(this.CreateFlashcard_Button);
             this.Controls.Add(this.Term_TextBox);
-            this.Controls.Add(this.ImportFlashcards_Button);
-            this.Controls.Add(this.ExportFlashcards_Button);
+            this.Controls.Add(this.ImportFlashcards_FCS_Button);
+            this.Controls.Add(this.ExportFlashcards_FCS_Button);
             this.Controls.Add(this.SelectAll_Button);
             this.Controls.Add(this.UnselectAll_Button);
             this.Controls.Add(this.Flashcards_CheckedListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "xFlash Maker";
@@ -164,11 +195,13 @@
         private System.Windows.Forms.CheckedListBox Flashcards_CheckedListBox;
         private System.Windows.Forms.Button UnselectAll_Button;
         private System.Windows.Forms.Button SelectAll_Button;
-        private System.Windows.Forms.Button ImportFlashcards_Button;
-        private System.Windows.Forms.Button ExportFlashcards_Button;
+        private System.Windows.Forms.Button ImportFlashcards_FCS_Button;
+        private System.Windows.Forms.Button ExportFlashcards_FCS_Button;
         private System.Windows.Forms.TextBox Term_TextBox;
         private System.Windows.Forms.Button CreateFlashcard_Button;
         private System.Windows.Forms.TextBox Definition_TextBox;
+        private System.Windows.Forms.Button ImportFlashcards_CSV_Button;
+        private System.Windows.Forms.Button ExportFlashcards_CSV_Button;
     }
 }
 

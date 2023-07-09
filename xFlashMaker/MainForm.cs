@@ -68,6 +68,19 @@ namespace xFlashMaker
             update_flashcards();
         }
 
+        private void ExportFlashcards_CSV_Button_Click(object sender, EventArgs e)
+        {
+            if (Flashcards_CheckedListBox.CheckedItems.Count < 1)
+                return;
+            FileManager.export_flashcards_as_csv(Flashcards_CheckedListBox.CheckedItems.Cast<Flashcard>().ToList());
+        }
+
+        private void ImportFlashcards_CSV_Button_Click(object sender, EventArgs e)
+        {
+            flashcards.AddRange(FileManager.import_flashcards_from_csv());
+            update_flashcards();
+        }
+
         private void check_all(CheckedListBox clb, bool check)
         {
             for(int i = 0; i < clb.Items.Count; i++)
