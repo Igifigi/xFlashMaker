@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using xFlashMaker;
@@ -167,6 +168,20 @@ namespace xFlashMaker
                 e.SuppressKeyPress = true;
                 create_flashcard();
             }
+        }
+
+        private void Term_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"[\\~@$^()_+=;`#%&*{}/:<>|\""',-]");
+            if (regex.IsMatch(e.KeyChar.ToString()))
+                e.Handled = true;
+        }
+
+        private void Definition_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"[\\~@$^()_+=;`#%&*{}/:<>|\""',-]");
+            if (regex.IsMatch(e.KeyChar.ToString()))
+                e.Handled = true;
         }
 
         #endregion
