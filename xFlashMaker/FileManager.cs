@@ -11,6 +11,11 @@ namespace xFlashMaker
 {
     internal class FileManager
     {
+        private static List<Flashcard> empty_collection = new List<Flashcard>();
+        private static void show_error(string error)
+        {
+            MessageBox.Show(string.Format("An error occured: {0}", error), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
         private static string generate_json(IEnumerable<Flashcard> flashcards)
         {
             return JsonConvert.SerializeObject(flashcards, Formatting.Indented);
@@ -27,8 +32,16 @@ namespace xFlashMaker
             dialog.Filter = "Flashcards file|*.fcs";
             dialog.Title = "Export flashcards";
             dialog.FileName = "flashcards";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            try
+            {
+                if (dialog.ShowDialog() != DialogResult.OK)
+                    return;
                 File.WriteAllText(dialog.FileName, generate_json(flashcards));
+        }
+            catch (Exception e)
+            {
+                show_error(e.Message);
+            }
         }
 
         public static IEnumerable<Flashcard> import_flashcards_from_fcs()
@@ -36,10 +49,18 @@ namespace xFlashMaker
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Flashcards file|*.fcs";
             dialog.Title = "Import flashcards";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            try
+            {
+                if (dialog.ShowDialog() != DialogResult.OK)
+                    return empty_collection;
                 return decode_json(File.ReadAllText(dialog.FileName));
-            return null;
+            }
+            catch (Exception e)
+            {
+                show_error(e.Message);
         } 
+            return empty_collection;
+        }
 
     }
 }
