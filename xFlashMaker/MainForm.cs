@@ -55,16 +55,16 @@ namespace xFlashMaker
             create_flashcard();
         }
 
-        private void ExportFlashcards_Button_Click(object sender, EventArgs e)
+        private void ExportFlashcards_FCS_Button_Click(object sender, EventArgs e)
         {
             if (Flashcards_CheckedListBox.CheckedItems.Count < 1)
                 return;
-            FileManager.export_flashcards(Flashcards_CheckedListBox.CheckedItems.Cast<Flashcard>().ToList());
+            FileManager.export_flashcards_as_fcs(Flashcards_CheckedListBox.CheckedItems.Cast<Flashcard>().ToList());
         }
 
-        private void ImportFlashcards_Button_Click(object sender, EventArgs e)
+        private void ImportFlashcards_FCS_Button_Click(object sender, EventArgs e)
         {
-            flashcards.AddRange(FileManager.import_flashcards());
+            flashcards.AddRange(FileManager.import_flashcards_from_fcs());
             update_flashcards();
         }
 

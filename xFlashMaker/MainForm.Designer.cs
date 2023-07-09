@@ -32,11 +32,13 @@
             this.Flashcards_CheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.UnselectAll_Button = new System.Windows.Forms.Button();
             this.SelectAll_Button = new System.Windows.Forms.Button();
-            this.ImportFlashcards_Button = new System.Windows.Forms.Button();
-            this.ExportFlashcards_Button = new System.Windows.Forms.Button();
+            this.ImportFlashcards_FCS_Button = new System.Windows.Forms.Button();
+            this.ExportFlashcards_FCS_Button = new System.Windows.Forms.Button();
             this.Term_TextBox = new System.Windows.Forms.TextBox();
             this.CreateFlashcard_Button = new System.Windows.Forms.Button();
             this.Definition_TextBox = new System.Windows.Forms.TextBox();
+            this.ImportFlashcards_CSV_Button = new System.Windows.Forms.Button();
+            this.ExportFlashcards_CSV_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Flashcards_CheckedListBox
@@ -70,27 +72,29 @@
             this.SelectAll_Button.UseVisualStyleBackColor = true;
             this.SelectAll_Button.Click += new System.EventHandler(this.SelectAll_Button_Click);
             // 
-            // ImportFlashcards_Button
+            // ImportFlashcards_FCS_Button
             // 
-            this.ImportFlashcards_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ImportFlashcards_Button.Location = new System.Drawing.Point(12, 12);
-            this.ImportFlashcards_Button.Name = "ImportFlashcards_Button";
-            this.ImportFlashcards_Button.Size = new System.Drawing.Size(400, 75);
-            this.ImportFlashcards_Button.TabIndex = 6;
-            this.ImportFlashcards_Button.Text = "Import flashcards";
-            this.ImportFlashcards_Button.UseVisualStyleBackColor = true;
-            this.ImportFlashcards_Button.Click += new System.EventHandler(this.ImportFlashcards_Button_Click);
+            this.ImportFlashcards_FCS_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ImportFlashcards_FCS_Button.Location = new System.Drawing.Point(11, 11);
+            this.ImportFlashcards_FCS_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImportFlashcards_FCS_Button.Name = "ImportFlashcards_FCS_Button";
+            this.ImportFlashcards_FCS_Button.Size = new System.Drawing.Size(195, 24);
+            this.ImportFlashcards_FCS_Button.TabIndex = 6;
+            this.ImportFlashcards_FCS_Button.Text = "Import flashcards from .fcs";
+            this.ImportFlashcards_FCS_Button.UseVisualStyleBackColor = true;
+            this.ImportFlashcards_FCS_Button.Click += new System.EventHandler(this.ImportFlashcards_FCS_Button_Click);
             // 
-            // ExportFlashcards_Button
+            // ExportFlashcards_FCS_Button
             // 
-            this.ExportFlashcards_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ExportFlashcards_Button.Location = new System.Drawing.Point(418, 12);
-            this.ExportFlashcards_Button.Name = "ExportFlashcards_Button";
-            this.ExportFlashcards_Button.Size = new System.Drawing.Size(400, 75);
-            this.ExportFlashcards_Button.TabIndex = 7;
-            this.ExportFlashcards_Button.Text = "Export flashcards";
-            this.ExportFlashcards_Button.UseVisualStyleBackColor = true;
-            this.ExportFlashcards_Button.Click += new System.EventHandler(this.ExportFlashcards_Button_Click);
+            this.ExportFlashcards_FCS_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ExportFlashcards_FCS_Button.Location = new System.Drawing.Point(210, 11);
+            this.ExportFlashcards_FCS_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExportFlashcards_FCS_Button.Name = "ExportFlashcards_FCS_Button";
+            this.ExportFlashcards_FCS_Button.Size = new System.Drawing.Size(194, 24);
+            this.ExportFlashcards_FCS_Button.TabIndex = 7;
+            this.ExportFlashcards_FCS_Button.Text = "Export flashcards as .fcs";
+            this.ExportFlashcards_FCS_Button.UseVisualStyleBackColor = true;
+            this.ExportFlashcards_FCS_Button.Click += new System.EventHandler(this.ExportFlashcards_FCS_Button_Click);
             // 
             // Term_TextBox
             // 

@@ -21,7 +21,7 @@ namespace xFlashMaker
             return JsonConvert.DeserializeObject<IEnumerable<Flashcard>>(json);
         }
 
-        public static void export_flashcards(IEnumerable<Flashcard> flashcards)
+        public static void export_flashcards_as_fcs(IEnumerable<Flashcard> flashcards)
         {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "Flashcards file|*.fcs";
@@ -31,7 +31,7 @@ namespace xFlashMaker
                 File.WriteAllText(dialog.FileName, generate_json(flashcards));
         }
 
-        public static IEnumerable<Flashcard> import_flashcards()
+        public static IEnumerable<Flashcard> import_flashcards_from_fcs()
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Flashcards file|*.fcs";
